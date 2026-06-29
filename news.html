@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻动态 - 理学院 | 桂林航天工业学院</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 120px 0 48px;
+            background: var(--bg-secondary);
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .page-header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .page-header .breadcrumb {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .page-header .breadcrumb a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        .page-content {
+            padding: 48px 0 80px;
+            background: var(--bg-primary);
+        }
+        .news-filter {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .news-filter-btn {
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: var(--bg-tertiary);
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        .news-filter-btn:hover, .news-filter-btn.active {
+            color: white;
+            background: var(--primary-gradient);
+        }
+        .news-list-item {
+            display: flex;
+            gap: 24px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition-fast);
+            cursor: pointer;
+        }
+        .news-list-item:hover {
+            padding-left: 8px;
+        }
+        .news-list-date {
+            flex-shrink: 0;
+            width: 72px;
+            text-align: center;
+        }
+        .news-list-date .day {
+            display: block;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .news-list-date .month {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+        .news-list-body h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        .news-list-body p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .news-list-tag {
+            display: inline-block;
+            padding: 2px 10px;
+            font-size: 11px;
+            font-weight: 600;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 100px;
+            margin-bottom: 8px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 40px;
+        }
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        .pagination-btn:hover { border-color: var(--primary); color: var(--primary); }
+        .pagination-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logoGrad3)"/>
+                        <path d="M8 22V10l8 6-8 6zM16 22V10l8 6-8 6z" fill="white" opacity="0.9"/>
+                        <defs><linearGradient id="logoGrad3" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">理学院</span>
+                    <span class="logo-subtitle">桂林航天工业学院</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" class="nav-link">首页</a></li>
+                <li><a href="../index.html#about" class="nav-link">学院概况</a></li>
+                <li><a href="news.html" class="nav-link active">新闻动态</a></li>
+                <li><a href="../index.html#majors" class="nav-link">专业设置</a></li>
+                <li><a href="../index.html#research" class="nav-link">科研成果</a></li>
+                <li><a href="../index.html#faculty" class="nav-link">师资队伍</a></li>
+                <li><a href="../index.html#contact" class="nav-link">联系我们</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-search" aria-label="搜索">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M12.5 12.5L17 17"/></svg>
+                </button>
+                <button class="btn-login">登录</button>
+                <button class="btn-mobile-menu" id="mobileMenuBtn" aria-label="菜单">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <p class="breadcrumb"><a href="../index.html">首页</a> / 新闻动态</p>
+            <h1>新闻动态</h1>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="news-filter">
+                <button class="news-filter-btn active">全部</button>
+                <button class="news-filter-btn">学术讲座</button>
+                <button class="news-filter-btn">学科竞赛</button>
+                <button class="news-filter-btn">学院动态</button>
+                <button class="news-filter-btn">教学动态</button>
+                <button class="news-filter-btn">通知公告</button>
+            </div>
+
+            <div class="news-list">
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">25</span>
+                        <span class="month">2026.06</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">学术讲座</span>
+                        <h3>"大数据与人工智能前沿"学术讲座成功举办</h3>
+                        <p>理学院特邀中科院计算所研究员做专题报告，深入探讨大数据与人工智能领域的最新研究进展与未来趋势，全院200余名师生参加了此次学术活动……</p>
+                    </div>
+                </article>
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">20</span>
+                        <span class="month">2026.06</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">学科竞赛</span>
+                        <h3>理学院学子在全国大学生数学建模竞赛中获佳绩</h3>
+                        <p>我院学生团队在2026年全国大学生数学建模竞赛中荣获一等奖1项、二等奖3项，充分展示了理学院学子的数学素养和创新能力……</p>
+                    </div>
+                </article>
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">15</span>
+                        <span class="month">2026.06</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">学院动态</span>
+                        <h3>理学院2026届毕业生就业工作推进会顺利召开</h3>
+                        <p>为进一步做好毕业生就业服务工作，理学院召开就业工作推进会，多措并举助力学生高质量就业……</p>
+                    </div>
+                </article>
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">10</span>
+                        <span class="month">2026.06</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">教学动态</span>
+                        <h3>理学院开展"课程思政"教学研讨活动</h3>
+                        <p>各教研室围绕课程思政建设展开深入研讨，分享教学经验，探索思政元素融入数理课程的新路径……</p>
+                    </div>
+                </article>
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">05</span>
+                        <span class="month">2026.06</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">通知公告</span>
+                        <h3>关于举办第15届全国大学生数学竞赛校内选拔赛的通知</h3>
+                        <p>为选拔优秀选手参加全国大学生数学竞赛，理学院将于2026年7月10日举办校内选拔赛，欢迎同学们积极报名……</p>
+                    </div>
+                </article>
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">28</span>
+                        <span class="month">2026.05</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">学术讲座</span>
+                        <h3>"统计学方法在航天数据分析中的应用"专题报告</h3>
+                        <p>北京航空航天大学统计学院教授应邀来我院做专题报告，探讨统计学方法在航天数据分析中的前沿应用……</p>
+                    </div>
+                </article>
+                <article class="news-list-item">
+                    <div class="news-list-date">
+                        <span class="day">22</span>
+                        <span class="month">2026.05</span>
+                    </div>
+                    <div class="news-list-body">
+                        <span class="news-list-tag">学院动态</span>
+                        <h3>我院与桂林市统计局签署产学研合作协议</h3>
+                        <p>理学院与桂林市统计局正式签署产学研合作协议，双方将在数据统计分析、人才培养等方面开展深度合作……</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-btn">←</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">…</button>
+                <button class="pagination-btn">8</button>
+                <button class="pagination-btn">→</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <rect width="32" height="32" rx="8" fill="url(#flogo)"/>
+                                <path d="M8 22V10l8 6-8 6zM16 22V10l8 6-8 6z" fill="white" opacity="0.9"/>
+                                <defs><linearGradient id="flogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                        <div><h4>理学院</h4><p>桂林航天工业学院</p></div>
+                    </div>
+                    <p class="footer-desc">崇德尚学 · 求实创新<br>智慧理院 · 焕新启航</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="../index.html#about">学院概况</a></li>
+                        <li><a href="news.html">新闻动态</a></li>
+                        <li><a href="../index.html#majors">专业设置</a></li>
+                        <li><a href="../index.html#research">科研成果</a></li>
+                        <li><a href="../index.html#faculty">师资队伍</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>教学资源</h4>
+                    <ul>
+                        <li><a href="#">教务系统</a></li>
+                        <li><a href="#">图书馆</a></li>
+                        <li><a href="#">课程平台</a></li>
+                        <li><a href="#">实验室预约</a></li>
+                        <li><a href="#">下载中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">学校官网</a></li>
+                        <li><a href="#">科研处</a></li>
+                        <li><a href="#">学工处</a></li>
+                        <li><a href="#">招生就业</a></li>
+                        <li><a href="#">校友之家</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 桂林航天工业学院理学院. All rights reserved.</p>
+                <p>桂ICP备2024XXXXXXXX号-1 | 广西桂林市七星区金鸡路2号</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="回到顶部">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 17V3M3 10l7-7 7 7"/></svg>
+    </button>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // News filter functionality
+        document.querySelector('.news-filter').addEventListener('click', function(e) {
+            const btn = e.target.closest('.news-filter-btn');
+            if (!btn) return;
+            document.querySelectorAll('.news-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    </script>
+</body>
+</html>

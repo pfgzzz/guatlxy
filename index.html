@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桂林航天工业学院 - 理学院</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+                        <path d="M8 22V10l8 6-8 6zM16 22V10l8 6-8 6z" fill="white" opacity="0.9"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#4F46E5"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">理学院</span>
+                    <span class="logo-subtitle">桂林航天工业学院</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">学院概况</a></li>
+                <li><a href="#news" class="nav-link">新闻动态</a></li>
+                <li><a href="#majors" class="nav-link">专业设置</a></li>
+                <li><a href="#research" class="nav-link">科研成果</a></li>
+                <li><a href="#faculty" class="nav-link">师资队伍</a></li>
+                <li><a href="#contact" class="nav-link">联系我们</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-search" aria-label="搜索">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="8.5" cy="8.5" r="5.5"/>
+                        <path d="M12.5 12.5L17 17"/>
+                    </svg>
+                </button>
+                <button class="btn-login">登录</button>
+                <button class="btn-mobile-menu" id="mobileMenuBtn" aria-label="菜单">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient-1"></div>
+            <div class="hero-gradient-2"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                智慧理院 · 焕新启航
+            </div>
+            <h1 class="hero-title">
+                探索科学奥秘<br>
+                <span class="hero-title-highlight">启迪智慧未来</span>
+            </h1>
+            <p class="hero-desc">
+                桂林航天工业学院理学院秉承"崇德尚学、求实创新"的院训，
+                致力于培养具有扎实数理基础和创新能力的复合型人才，
+                在数据科学、人工智能等前沿领域不断探索前行。
+            </p>
+            <div class="hero-actions">
+                <a href="#about" class="btn-primary">
+                    了解学院
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
+                    </svg>
+                </a>
+                <a href="#majors" class="btn-secondary">
+                    专业介绍
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-count="8">0</span>
+                <span class="stat-label">本科专业</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="120">0</span>
+                <span class="stat-label">专任教师</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="3200">0</span>
+                <span class="stat-label">在校学生</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="45">0</span>
+                <span class="stat-label">科研项目</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">学院概况</span>
+                <h2 class="section-title">关于理学院</h2>
+                <p class="section-desc">桂林航天工业学院理学院成立于学校创建之初，是学校重要的基础学科教学与科研单位</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l11-6 11 6v11l-11 6-11-6z"/>
+                            <path d="M3 9l11 6M14 15l11-6"/>
+                            <path d="M14 15v11"/>
+                        </svg>
+                    </div>
+                    <h3>学院使命</h3>
+                    <p>以数学和统计学为基石，以数据科学为特色，服务于航空航天事业和地方经济社会发展，培养具有创新精神和实践能力的高素质人才。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="14" cy="14" r="11"/>
+                            <path d="M14 7v7l5 3"/>
+                        </svg>
+                    </div>
+                    <h3>发展历程</h3>
+                    <p>从建校初期的基础教学部到如今的理学院，经过数十年的发展，学院已形成涵盖数学、统计学、数据科学等多学科协调发展的格局。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 3v22M3 14h22"/>
+                            <circle cx="14" cy="14" r="3"/>
+                            <circle cx="23" cy="5" r="3"/>
+                            <circle cx="5" cy="23" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>学科特色</h3>
+                    <p>以数据科学与大数据技术专业为引领，强化数学与统计学科基础，注重交叉融合，突出航空航天背景下的数据应用特色。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">新闻动态</span>
+                <h2 class="section-title">学院新闻</h2>
+                <p class="section-desc">了解理学院最新动态与学术活动</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card news-card-featured">
+                    <div class="news-card-image">
+                        <div class="news-image-placeholder gradient-1">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1.5" opacity="0.6">
+                                <rect x="6" y="8" width="36" height="32" rx="4"/>
+                                <path d="M6 16h36"/>
+                                <path d="M16 24h12"/>
+                                <path d="M16 30h8"/>
+                            </svg>
+                        </div>
+                        <span class="news-tag">学术讲座</span>
+                    </div>
+                    <div class="news-card-body">
+                        <time class="news-date">2026年6月25日</time>
+                        <h3 class="news-title">"大数据与人工智能前沿"学术讲座成功举办</h3>
+                        <p class="news-excerpt">理学院特邀中科院计算所研究员做专题报告，深入探讨大数据与人工智能领域的最新研究进展与未来趋势……</p>
+                        <a href="#" class="news-link">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div class="news-image-placeholder gradient-2">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1.5" opacity="0.6">
+                                <circle cx="24" cy="24" r="16"/>
+                                <path d="M24 16v8l6 4"/>
+                            </svg>
+                        </div>
+                        <span class="news-tag">学科竞赛</span>
+                    </div>
+                    <div class="news-card-body">
+                        <time class="news-date">2026年6月20日</time>
+                        <h3 class="news-title">理学院学子在全国大学生数学建模竞赛中获佳绩</h3>
+                        <p class="news-excerpt">我院学生团队在2026年全国大学生数学建模竞赛中荣获一等奖1项、二等奖3项……</p>
+                        <a href="#" class="news-link">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div class="news-image-placeholder gradient-3">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1.5" opacity="0.6">
+                                <path d="M24 4L29 18h16l-12 9 4 15-12-8-12 8 4-15-12-9h16z"/>
+                            </svg>
+                        </div>
+                        <span class="news-tag">学院动态</span>
+                    </div>
+                    <div class="news-card-body">
+                        <time class="news-date">2026年6月15日</time>
+                        <h3 class="news-title">理学院2026届毕业生就业工作推进会顺利召开</h3>
+                        <p class="news-excerpt">为进一步做好毕业生就业服务工作，理学院召开就业工作推进会，多措并举助力学生高质量就业……</p>
+                        <a href="#" class="news-link">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div class="news-image-placeholder gradient-4">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1.5" opacity="0.6">
+                                <path d="M17 8h14a4 4 0 014 4v24a4 4 0 01-4 4H17a4 4 0 01-4-4V12a4 4 0 014-4z"/>
+                                <path d="M19 16h10M19 22h10M19 28h6"/>
+                            </svg>
+                        </div>
+                        <span class="news-tag">教学动态</span>
+                    </div>
+                    <div class="news-card-body">
+                        <time class="news-date">2026年6月10日</time>
+                        <h3 class="news-title">理学院开展"课程思政"教学研讨活动</h3>
+                        <p class="news-excerpt">各教研室围绕课程思政建设展开深入研讨，分享教学经验，探索思政元素融入数理课程的新路径……</p>
+                        <a href="#" class="news-link">阅读全文 →</a>
+                    </div>
+                </article>
+            </div>
+            <div class="news-more">
+                <a href="pages/news.html" class="btn-outline">
+                    查看更多新闻
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Majors Section -->
+    <section class="majors" id="majors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">专业设置</span>
+                <h2 class="section-title">学科专业</h2>
+                <p class="section-desc">理学院设有多个本科专业，涵盖数学、统计学与数据科学领域</p>
+            </div>
+            <div class="majors-grid">
+                <div class="major-card">
+                    <div class="major-card-bg"></div>
+                    <div class="major-card-content">
+                        <div class="major-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="4" width="24" height="24" rx="4"/>
+                                <path d="M10 12h12M10 18h8"/>
+                                <circle cx="24" cy="24" r="5"/>
+                            </svg>
+                        </div>
+                        <h3>数据科学与大数据技术</h3>
+                        <p>培养掌握大数据处理与分析技术的应用型人才，涵盖数据采集、清洗、建模与可视化全流程。</p>
+                        <ul class="major-features">
+                            <li>Python/R编程</li>
+                            <li>机器学习</li>
+                            <li>大数据平台</li>
+                            <li>数据可视化</li>
+                        </ul>
+                        <a href="#" class="major-link">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="major-card">
+                    <div class="major-card-bg"></div>
+                    <div class="major-card-content">
+                        <div class="major-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 24L16 8l12 16H4z"/>
+                                <path d="M8 20l4-5 4 5 4-7 4 7"/>
+                            </svg>
+                        </div>
+                        <h3>数学与应用数学</h3>
+                        <p>注重数学基础理论与应用能力培养，为航空航天、金融分析、信息技术等领域输送数学人才。</p>
+                        <ul class="major-features">
+                            <li>数学分析</li>
+                            <li>高等代数</li>
+                            <li>数值计算</li>
+                            <li>数学建模</li>
+                        </ul>
+                        <a href="#" class="major-link">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="major-card">
+                    <div class="major-card-bg"></div>
+                    <div class="major-card-content">
+                        <div class="major-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="16" cy="16" r="12"/>
+                                <path d="M16 8v8l4 4"/>
+                                <path d="M8 16h3M21 16h3M16 8v3M16 21v3"/>
+                            </svg>
+                        </div>
+                        <h3>统计学</h3>
+                        <p>培养具备统计调查、数据分析与预测决策能力的专业人才，服务于经济统计与市场分析领域。</p>
+                        <ul class="major-features">
+                            <li>概率论</li>
+                            <li>数理统计</li>
+                            <li>回归分析</li>
+                            <li>SAS/SPSS</li>
+                        </ul>
+                        <a href="#" class="major-link">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">科研成果</span>
+                <h2 class="section-title">科研与学术</h2>
+                <p class="section-desc">理学院教师团队在多个科研方向上取得丰硕成果</p>
+            </div>
+            <div class="research-tabs" id="researchTabs">
+                <button class="research-tab active" data-tab="projects">科研项目</button>
+                <button class="research-tab" data-tab="papers">学术论文</button>
+                <button class="research-tab" data-tab="awards">获奖成果</button>
+            </div>
+            <div class="research-content active" id="tab-projects">
+                <div class="research-list">
+                    <div class="research-item">
+                        <div class="research-rank">01</div>
+                        <div class="research-info">
+                            <h4>基于深度学习的航天器故障预测方法研究</h4>
+                            <p>国家自然科学基金面上项目 · 2024-2027</p>
+                            <span class="research-status ongoing">进行中</span>
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-rank">02</div>
+                        <div class="research-info">
+                            <h4>大数据驱动的复杂系统状态监测关键技术</h4>
+                            <p>广西自然科学基金重点项目 · 2025-2028</p>
+                            <span class="research-status ongoing">进行中</span>
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-rank">03</div>
+                        <div class="research-info">
+                            <h4>面向智慧城市的时空数据分析平台研发</h4>
+                            <p>桂林市科技计划项目 · 2024-2026</p>
+                            <span class="research-status done">已结题</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="research-content" id="tab-papers">
+                <div class="research-list">
+                    <div class="research-item">
+                        <div class="research-rank">01</div>
+                        <div class="research-info">
+                            <h4>Adaptive Deep Neural Networks for Time Series Forecasting</h4>
+                            <p>IEEE Transactions on Neural Networks · 2026</p>
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-rank">02</div>
+                        <div class="research-info">
+                            <h4>基于注意力机制的图神经网络在推荐系统中的应用</h4>
+                            <p>计算机学报 · 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="research-content" id="tab-awards">
+                <div class="research-list">
+                    <div class="research-item">
+                        <div class="research-rank">01</div>
+                        <div class="research-info">
+                            <h4>广西自然科学奖二等奖</h4>
+                            <p>"复杂数据建模与智能分析方法" · 2025年</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty" id="faculty">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">师资队伍</span>
+                <h2 class="section-title">教师团队</h2>
+                <p class="section-desc">理学院拥有一支结构合理、经验丰富的高素质教师队伍</p>
+            </div>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-avatar">
+                        <div class="avatar-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5">
+                                <circle cx="20" cy="14" r="8"/>
+                                <path d="M6 36c0-8 6-14 14-14s14 6 14 14"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>唐海涛</h3>
+                        <span class="faculty-title">副教授 / 硕士生导师</span>
+                        <p class="faculty-field">研究方向：数据挖掘、机器学习</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-avatar">
+                        <div class="avatar-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5">
+                                <circle cx="20" cy="14" r="8"/>
+                                <path d="M6 36c0-8 6-14 14-14s14 6 14 14"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>袁媛</h3>
+                        <span class="faculty-title">教授 / 教研室主任</span>
+                        <p class="faculty-field">研究方向：应用数学、数学建模</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-avatar">
+                        <div class="avatar-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5">
+                                <circle cx="20" cy="14" r="8"/>
+                                <path d="M6 36c0-8 6-14 14-14s14 6 14 14"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>李明辉</h3>
+                        <span class="faculty-title">教授 / 博士生导师</span>
+                        <p class="faculty-field">研究方向：统计学、大数据分析</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-avatar">
+                        <div class="avatar-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5">
+                                <circle cx="20" cy="14" r="8"/>
+                                <path d="M6 36c0-8 6-14 14-14s14 6 14 14"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>张伟</h3>
+                        <span class="faculty-title">副教授</span>
+                        <p class="faculty-field">研究方向：最优化理论、运筹学</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-avatar">
+                        <div class="avatar-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5">
+                                <circle cx="20" cy="14" r="8"/>
+                                <path d="M6 36c0-8 6-14 14-14s14 6 14 14"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>陈静</h3>
+                        <span class="faculty-title">讲师 / 博士</span>
+                        <p class="faculty-field">研究方向：人工智能、深度学习</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-avatar">
+                        <div class="avatar-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5">
+                                <circle cx="20" cy="14" r="8"/>
+                                <path d="M6 36c0-8 6-14 14-14s14 6 14 14"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>刘芳</h3>
+                        <span class="faculty-title">副教授</span>
+                        <p class="faculty-field">研究方向：数值计算、并行算法</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">联系我们</span>
+                    <h2 class="section-title">欢迎咨询</h2>
+                    <p class="contact-desc">如有任何问题或合作意向，请通过以下方式与我们联系</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 7l7 5 7-5"/>
+                                    <rect x="2" y="4" width="16" height="12" rx="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">电子邮箱</span>
+                                <span class="contact-value">science@guat.edu.cn</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2v3M14 2v3M3 7h14v12H3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">联系电话</span>
+                                <span class="contact-value">0773-2253000</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="10" cy="10" r="7"/>
+                                    <path d="M10 6v4l3 2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">办公时间</span>
+                                <span class="contact-value">周一至周五 8:30-17:30</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="10" cy="8" r="5"/>
+                                    <path d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">学院地址</span>
+                                <span class="contact-value">广西桂林市七星区金鸡路2号</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-card">
+                        <h3>发送消息</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="姓名" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="邮箱" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="主题">
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="4" placeholder="请输入您的消息..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-full">
+                                发送消息
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 2l12 6-12 6 3-6-3-6z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <rect width="32" height="32" rx="8" fill="url(#logoGrad2)"/>
+                                <path d="M8 22V10l8 6-8 6zM16 22V10l8 6-8 6z" fill="white" opacity="0.9"/>
+                                <defs>
+                                    <linearGradient id="logoGrad2" x1="0" y1="0" x2="32" y2="32">
+                                        <stop offset="0%" stop-color="#4F46E5"/>
+                                        <stop offset="100%" stop-color="#7C3AED"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>理学院</h4>
+                            <p>桂林航天工业学院</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">崇德尚学 · 求实创新<br>智慧理院 · 焕新启航</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#about">学院概况</a></li>
+                        <li><a href="#news">新闻动态</a></li>
+                        <li><a href="#majors">专业设置</a></li>
+                        <li><a href="#research">科研成果</a></li>
+                        <li><a href="#faculty">师资队伍</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>教学资源</h4>
+                    <ul>
+                        <li><a href="#">教务系统</a></li>
+                        <li><a href="#">图书馆</a></li>
+                        <li><a href="#">课程平台</a></li>
+                        <li><a href="#">实验室预约</a></li>
+                        <li><a href="#">下载中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">学校官网</a></li>
+                        <li><a href="#">科研处</a></li>
+                        <li><a href="#">学工处</a></li>
+                        <li><a href="#">招生就业</a></li>
+                        <li><a href="#">校友之家</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 桂林航天工业学院理学院. All rights reserved.</p>
+                <p>桂ICP备2024XXXXXXXX号-1 | 广西桂林市七星区金鸡路2号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="回到顶部">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 17V3M3 10l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
